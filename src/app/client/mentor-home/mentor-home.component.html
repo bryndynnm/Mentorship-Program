@@ -1,0 +1,17 @@
+<!-- placeholder -->
+What type of training would you like to give?
+<!-- placeholder -->
+
+<div *ngFor="let mType of mentorshipTypes; let i=index">
+    <div class="row">
+        <div class="input-group-prepend">
+            <span class="class input-group-text">{{mType.name}}</span>
+            <input type="checkbox"  class="form-control-checkbox" [(ngModel)]="mType.value" (click)="testFunction(i)" />
+        </div>
+    </div>
+</div>
+<div class="row">         
+    <div class="col-12 text-xs-center text-center">                                 
+        <button class="btn btn-standard btn-success" id="submit" (click)="submitForm()" routerLink="/event" routerLinkActive="active">Submit</button>                 
+    </div>                                              
+</div>
